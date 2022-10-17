@@ -37,7 +37,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/ag.Vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 " coc.nvim
 "let g:coc_golbal_extensions = ['coc-vimlsp']
@@ -77,7 +78,7 @@ map <s-j> <c-j>p
 map <s-k> <c-k>p
 let g:ctrlsf_backend = "ag"
 let g:ctrlsf_default_view_mode = 'compact'
-nnoremap <Leader>p :FZF<CR>
+nnoremap <Leader>p :LeaderfFile<CR>
 "
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -114,4 +115,5 @@ map <right> :vertical resize+5<CR>
 map tu :tabe<CR>
 map th :-tabnext<CR>
 map tl :+tabnext<CR>
-
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
