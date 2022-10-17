@@ -72,6 +72,11 @@ nmap <space>e <Cmd>CocCommand explorer<CR>
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
+let g:ackprg = 'ag --nogroup --nocolor --column'
+nnoremap <Leader>f :CtrlSF<Space>
+map <s-j> <c-j>p
+map <s-k> <c-k>p
+let g:ctrlsf_default_view_mode = 'compact'
 "
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
