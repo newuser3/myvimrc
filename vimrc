@@ -75,6 +75,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 nnoremap <Leader>f :CtrlSF<Space>
 map <s-j> <c-j>p
 map <s-k> <c-k>p
+let g:ctrlsf_backend = "ag"
 let g:ctrlsf_default_view_mode = 'compact'
 nnoremap <Leader>p :FZF<CR>
 "
