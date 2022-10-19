@@ -39,6 +39,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'vim-airline/vim-airline'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'honza/vim-snippets'
 
 " coc.nvim
 "let g:coc_golbal_extensions = ['coc-vimlsp']
