@@ -23,7 +23,6 @@ call plug#begin('~/.vim/plug')
 " 此处放准备安装的插件
 "Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
