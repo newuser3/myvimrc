@@ -37,7 +37,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/ag.Vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'vim-airline/vim-airline'
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'honza/vim-snippets'
 
