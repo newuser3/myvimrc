@@ -11,13 +11,6 @@ set incsearch
 set ignorecase
 set smartcase
 set colorcolumn=80
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap < <><Esc>i
-inoremap { {}<Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
-inoremap { {<CR>}<Esc>O
 autocmd BufReadPost *
       \ if line("'\"") >= 1 && line("'\"") <= line("$")
       \ |   exe "normal! g`\""
@@ -28,7 +21,7 @@ autocmd BufReadPost *
 call plug#begin('~/.vim/plug')
 
 " 此处放准备安装的插件
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+"Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -73,6 +66,8 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <space>e <Cmd>CocCommand explorer<CR>
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+let g:go_list_type = "quickfix"
 let g:ackprg = 'ag --nogroup --nocolor --column'
 nnoremap <Leader>f :CtrlSF<Space>
 map <s-j> <c-j>p
@@ -118,3 +113,5 @@ map th :-tabnext<CR>
 map tl :+tabnext<CR>
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
