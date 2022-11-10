@@ -21,7 +21,7 @@ autocmd BufReadPost *
 call plug#begin('~/.vim/plug')
 
 " 此处放准备安装的插件
-"Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'joshdick/onedark.vim'
@@ -96,6 +96,11 @@ colorscheme onedark
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
+map <leader>n :bp<CR>
+map <leader>m :bn<CR>
+map tu :tabe<CR>
+map th :-tabnext<CR>
+map tl :+tabnext<CR>
 
 nnoremap <silent> <F4> :GoDecls<CR> " 将GoDecls的开关按键设置为 F4
 nnoremap <leader><F2> :marks<CR>
@@ -108,9 +113,6 @@ map <up> :res +5<CR>
 map <down> :res -5<CR>
 map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
-map tu :tabe<CR>
-map th :-tabnext<CR>
-map tl :+tabnext<CR>
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:coc_snippet_next = '<c-j>'
