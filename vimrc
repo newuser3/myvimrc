@@ -10,7 +10,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set colorcolumn=80
+set colorcolumn=120
 autocmd BufReadPost *
       \ if line("'\"") >= 1 && line("'\"") <= line("$")
       \ |   exe "normal! g`\""
